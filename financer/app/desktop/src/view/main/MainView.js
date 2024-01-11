@@ -5,22 +5,21 @@ Ext.define('Financer.view.main.MainView', {
   viewModel: {
     type: 'mainviewmodel'
   },
-  items: [
-    {
-      xtype: 'component',
-      html: '<a style="font-size:24px" target="_blank" href="https://docs-devel.sencha.com/extjs/7.0.0-CE/guides/quick_start/What_You_Will_Be_Coding.html">Quick Start Tutorial Here</a><p>'
-    },
-    {
-      xtype: 'displayfield',
-      reference: 'df',
-      bind: {
-        value: '{clickTime}'
-      }
-    },
-    {
-      xtype: 'button',
-      text: 'Click Me!',
-      handler: 'onButtonClick'
-    }
-  ]
+  layout: 'fit',
+  items: [{
+    xtype: 'mainheader',
+    docked: 'top',
+    reference: 'headerview'
+  }, {
+    xtype: 'navpanel',
+    html: 'Nav',
+    docked: 'left',
+    reference: 'navegationview',
+    width: 250,
+  }, {
+    xtype: 'centercontainer',
+    html: 'Seja Bem Vindo ao App Financer',
+
+
+  }]
 })
