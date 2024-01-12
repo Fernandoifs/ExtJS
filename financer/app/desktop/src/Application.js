@@ -7,7 +7,7 @@ Ext.define('Financer.Application', {
     Ext.Viewport.add([{xtype: 'mainview'}])
   },
 
-  onAppUpdate: function () {
+  onAppUpdate: function () { 
     Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
       function (choice) {
         if (choice === 'yes') {
