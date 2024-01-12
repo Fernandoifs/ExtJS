@@ -12,14 +12,12 @@ Ext.define('Financer.view.main.MainView', {
     reference: 'headerview'
   }, {
     xtype: 'navpanel',
-    html: 'Nav',
     docked: 'left',
     reference: 'navegationview',
     width: 250,
   }, {
     xtype: 'centercontainer',
     html: 'Seja Bem Vindo ao App Financer',
-
-
+    reference: 'centerview',
   }]
 })
