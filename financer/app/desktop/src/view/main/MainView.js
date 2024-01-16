@@ -1,4 +1,4 @@
-Ext.define('Financer.view.main.MainView', {
+Ext.define('Financer.view.main.MainView',  {
   extend: 'Ext.Container',
   xtype: 'mainview',
   controller: 'mainviewcontroller',
@@ -17,7 +17,6 @@ Ext.define('Financer.view.main.MainView', {
     width: 250,
   }, {
     xtype: 'centercontainer',
-    html: 'Seja Bem Vindo ao App Financer',
     reference: 'centerview',
   }]
 })
