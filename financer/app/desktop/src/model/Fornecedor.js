@@ -3,17 +3,17 @@ Ext.define('Financer.model.Fornecedor', {
 
     idProperty: 'id',
 
-    proxy: {
-        type: 'ajax', 
-        url: '/resources/desktop/fornec.json',
-        reader: {
-            type: 'json',
-            rootProperty: 'data'
-        },
-        writer: {
-            type: 'json'
-        }
-    },
+    // proxy: {
+    //     type: 'ajax', 
+    //     url: '/resources/desktop/fornecedores.json',
+    //     reader: {
+    //         type: 'json',
+    //         rootProperty: 'data'
+    //     },
+    //     writer: {
+    //         type: 'json'
+    //     }
+    // },
 
     requires: [
         'Ext.data.validator.Presence',
