@@ -1,6 +1,5 @@
 {
-    "leaf": true,
-    "children": [{
+    "data": [{
         "id": 1,
         "nome": "João",
         "sobrenome": "Silva",
