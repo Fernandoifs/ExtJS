@@ -1,22 +1,27 @@
-Ext.define('Financer.view.fornecedor.Main', {
-    extend: 'Ext.Panel',
-    alias: 'widget.fornecedoresview',
+Ext.define("Financer.view.fornecedor.Main", {
+    extend: "Ext.Panel",
+    alias: "widget.fornecedoresview",
     bodyPadding: 0,
-
+  
+    controller: "fornecedormainview",
+  
     viewModel: {
-        type: 'fornecedorview'
+      type: "fornecedorview",
     },
-    
+  
     layout: {
-        type: 'vbox',
-        align: 'stretch'
+      type: "vbox",
+      align: "stretch",
     },
-    items: [{
-        xtype: 'fornecedorgrid',
-        flex: 1,
+  
+    items: [
+      {
+        xtype: "fornecedorgrid",
         shadow: true,
+        flex: 1,
         bind: {
-            store: '{fornecedores}'
-        }
-    }]
-})
+          store: "{fornecedores}",
+        },
+      },
+    ],
+  });

@@ -10,6 +10,15 @@ Ext.define('Financer.model.Fornecedor', {
         'Ext.data.proxy.Ajax',
     ],
 
+    proxy: {
+        type: "ajax",
+        url: "/resources/desktop/fornecedores.json",
+        reader: {
+          type: "json",
+          rootProperty: "data",
+        },
+      },
+      
     validators: {
         nome: 'presence'
     },
