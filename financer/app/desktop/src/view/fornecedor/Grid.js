@@ -17,7 +17,7 @@ Ext.define('Financer.view.fornecedor.Grid', {
         items: [
           {
             xtype: 'button',
-            ui: 'action',
+            ui: 'action', //aplica o tema no botao
             text: 'Novo',
             tooltip: 'Clique para Adicionar um novo Registro',
             listeners:{
@@ -29,6 +29,14 @@ Ext.define('Financer.view.fornecedor.Grid', {
             tooltip: 'Clique para Editar um Registro',
             listeners:{
               tap: 'openEditButtonTap'
+            }
+          },{
+            xtype: 'button',
+            ui: 'decline',
+            text: 'Excluir',
+            tooltip: 'Clique para Editar um Registro',
+            listeners:{
+              tap: 'openDelButtonTap'
             }
           },
         ],
@@ -46,6 +54,11 @@ Ext.define('Financer.view.fornecedor.Grid', {
         dataIndex: 'nome',
         flex: 1,
         editable: true,
+      },
+      {
+        text: 'CPF',
+        dataIndex: 'cpf',
+        width: 200,
       },
       {
         text: 'Telefone',

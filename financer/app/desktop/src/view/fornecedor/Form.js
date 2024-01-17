@@ -2,8 +2,10 @@ Ext.define('Financer.view.fornecedor.Form', {
   extend: 'Ext.form.Panel',
   alias: 'widget.fornecedorform',
 
+  viewModel: true,
+
   items: [
-    { xtype: 'textfield', label: 'Nome' },
+    { xtype: 'textfield', label: 'Nome', bind: {value: '{record.nome}'} },
     {
       xtype: 'fieldcontainer',
       defaults: {
@@ -11,8 +13,8 @@ Ext.define('Financer.view.fornecedor.Form', {
       },
 
       items: [
-        { xtype: 'textfield', label: 'Telefone', margin: '0 5 0 0' },
-        { xtype: 'textfield', label: 'Email' },
+        { xtype: 'textfield', label: 'Telefone', margin: '0 5 0 0', bind: {value: '{record.telefone}'}},
+        { xtype: 'textfield', label: 'Email', bind: {value: '{record.email}'} },
       ],
     }, {
       xtype: 'fieldcontainer',
@@ -21,8 +23,8 @@ Ext.define('Financer.view.fornecedor.Form', {
       },
 
       items: [
-        { xtype: 'textfield', label: 'CPF', margin: '0 5 0 0' },
-        { xtype: 'textfield', label: 'RG' },
+        { xtype: 'textfield', label: 'CPF', margin: '0 5 0 0' , bind: {value: '{record.cpf}'} },
+        { xtype: 'textfield', label: 'RG', bind: {value: '{record.rg}'} },
       ],
     },{
       xtype: 'textfield',

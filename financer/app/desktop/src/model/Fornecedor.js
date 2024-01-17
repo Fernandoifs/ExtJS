@@ -11,12 +11,13 @@ Ext.define('Financer.model.Fornecedor', {
     ],
 
     proxy: {
-        type: "ajax",
-        url: "/resources/desktop/fornecedores.json",
+        type: 'ajax',
+        url: '/resources/desktop/fornecedores.json',
         reader: {
-          type: "json",
-          rootProperty: "data",
+          type: 'json',
+          rootProperty: 'data',
         },
+        autoLoad: true
       },
       
     validators: {
