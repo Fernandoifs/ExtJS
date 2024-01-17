@@ -1,6 +1,6 @@
-Ext.define("Financer.view.fornecedor.Grid", {
-    extend: "Ext.grid.Grid",
-    alias: "widget.fornecedorgrid",
+Ext.define('Financer.view.fornecedor.Grid', {
+    extend: 'Ext.grid.Grid',
+    alias: 'widget.fornecedorgrid',
   
     //requires: ['Ext.dataview.plugin.ListPaging', 'Ext.dataview.plugin.Editable'],
     plugins: {
@@ -9,19 +9,26 @@ Ext.define("Financer.view.fornecedor.Grid", {
       },
       grideditable: true
     },
-  
+   
     items: [
       {
-        xtype: "toolbar",
-        docked: "top",
+        xtype: 'toolbar',
+        docked: 'top',
         items: [
           {
-            xtype: "button",
-            ui: "action",
-            text: "Novo",
-            tooltip: "Clique para Adicionar um novo Registro",
+            xtype: 'button',
+            ui: 'action',
+            text: 'Novo',
+            tooltip: 'Clique para Adicionar um novo Registro',
             listeners:{
               tap: 'onNovoButtonTap'
+            }
+          },{
+            xtype: 'button',
+            text: 'Editar',
+            tooltip: 'Clique para Editar um Registro',
+            listeners:{
+              tap: 'openEditButtonTap'
             }
           },
         ],
@@ -30,25 +37,25 @@ Ext.define("Financer.view.fornecedor.Grid", {
   
     columns: [
       {
-        text: "ID",
-        dataIndex: "id",
+        text: 'ID',
+        dataIndex: 'id',
         width: 50,
       },
       {
-        text: "Nome",
-        dataIndex: "nome",
+        text: 'Nome',
+        dataIndex: 'nome',
         flex: 1,
         editable: true,
       },
       {
-        text: "Telefone",
-        dataIndex: "telefone",
+        text: 'Telefone',
+        dataIndex: 'telefone',
         width: 200,
       },
       {
-        text: "Email",
-        dataIndex: "email",
-        width: 250,
+        text: 'Email',
+        dataIndex: 'email',
+        width: 350,
       },
     ],
   });
